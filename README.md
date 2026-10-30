@@ -1,121 +1,95 @@
-## Scam Message Investigator
+# Scam Message Investigaton
 
-## Live Demo
-https://scammessageinvestigator-pmahydfw4u46gouekmisse.streamlit.app/
+### Introduction
+Scam Message Investigator is an AI-powered application that helps users identify suspicious messages, emails, and job offers. It uses Artificial Intelligence to analyze the given message and detect possible scam activities.
 
-## About the Project
+### Features
+- Analyze suspicious SMS messages.
+- Check emails for possible scam activities.
+- Detect fake job offers.
+- Identify warning signs in messages.
+- Generate AI-based investigation results.
+- Provide safety recommendations.
 
-Scam Message Investigator is an AI-assisted cybersecurity application developed using Python and Streamlit. It helps users identify suspicious messages from SMS, WhatsApp, emails, and other platforms.
-
-The application analyzes message content and detects possible scam patterns using rule-based detection and optional AI-based explanations.
-
-## Features
-
-- **Scam Detection:** Identifies possible fraudulent messages.
-- **AI Explanation:** Provides additional explanations using Ollama AI.
-- **URL Detection:** Checks website links for suspicious patterns.
-- **Risk Score:** Calculates an estimated risk percentage.
-- **Analysis History:** Stores previous analysis results during the current session.
-- **Safety Tips:** Provides useful recommendations to avoid online scams.
-- **Dashboard:** Displays message classification and analysis statistics.
-- **Language Support:** English and Tamil message support (where supported by detection rules).
-
-## Detection Categories
-
-1. Bank Fraud
-2. OTP Fraud
-3. Job Scam
-4. Lottery Scam
-5. Phishing Scam
-6. Payment Scam
-
-## Technologies Used
-
+### Technologies Used
 - Python
 - Streamlit
 - Ollama
 - Gemma 3:1B
-- Pandas
-- Plotly
-- Regular Expressions
+- Requests
 
-## Project Structure
-
-```text
-Scam-Message-Investigator/
-│
-├── app.py
-├── requirements.txt
-└── README.md
-```
-
-## Installation and Setup
-
-### Step 1: Clone the Repository
+### Requirements
+Install the required Python packages:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_LINK
+pip install streamlit requests
 ```
 
-### Step 2: Open the Project Folder
-
-```bash
-cd Scam-Message-Investigator
-```
-
-### Step 3: Install Required Libraries
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-### Step 4: Run the Application
-
-```bash
-python -m streamlit run app.py
-```
-
-The application will open in your browser at:
-
-```text
-http://localhost:8501
-```
-
-## Ollama Setup (Optional)
-
-To enable AI-based explanations, install Ollama and download the Gemma model.
+Install Ollama and download the Gemma model:
 
 ```bash
 ollama pull gemma3:1b
 ```
 
-Start Ollama and enable the AI Explanation option in the application.
+### Project Structure
 
-The application can also perform rule-based detection without Ollama.
+```text
+Scam Message Investigator/
+│
+├── app.py
+└── requirements.txt
+```
 
-## How to Use
+### How to Run the Project
 
-1. Open the Scam Message Investigator application.
-2. Enter an SMS, WhatsApp message, or email.
-3. Click the Analyze Message button.
-4. View the scam classification and risk score.
-5. Read the warning reasons and safety recommendations.
-6. Use the URL Checker to check suspicious website links.
-7. View analysis statistics in the Dashboard.
+**Step 1:** Install the required packages.
 
-## Project Objective
+```bash
+pip install -r requirements.txt
+```
 
-The main objective of this project is to help users recognize possible online scams, understand warning signs, and follow safe online practices.
+**Step 2:** Download the AI model.
 
-## Disclaimer
+```bash
+ollama pull gemma3:1b
+```
 
-This application is an educational cybersecurity tool. Detection results are estimates and cannot guarantee whether a message or website is genuine or fraudulent. Always verify suspicious messages through official sources.
+**Step 3:** Make sure Ollama is running.
 
-## Future Enhancements
+```bash
+ollama run gemma3:1b
+```
 
-- Improved Tamil language scam detection.
-- Real-time scam URL reputation checking.
-- Database-based analysis history.
-- Email and SMS integration.
-- Improved AI-based fraud detection.
+**Step 4:** Open another terminal and run the Streamlit application.
 
+```bash
+python -m streamlit run app.py
+```
+
+**Step 5:** Open the application in your browser.
+
+```text
+http://localhost:8501
+```
+
+### How It Works
+1. Select the message type.
+2. Enter the suspicious message.
+3. Click the Investigate button.
+4. The AI model analyzes the message.
+5. View the investigation result and safety recommendations.
+
+### Output
+The application provides an AI-based analysis of the submitted message, including possible scam indicators and recommended safety actions.
+
+### Note
+This application provides an initial AI-based assessment. Its results are not a guarantee that a message or link is safe or fraudulent. Always verify suspicious messages through official sources.
+
+### Screenshots
+<img width="1282" height="756" alt="image" src="https://github.com/user-attachments/assets/70e03566-a3b9-4fa7-a3a6-c2fd3d1020f9" />
+<img width="1630" height="846" alt="image" src="https://github.com/user-attachments/assets/950fe799-eead-4c58-9b27-d87949e01ccc" />
+
+
+
+### Conclusion
+Scam Message Investigator helps users understand possible online scams and encourages safe digital communication.
